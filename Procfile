@@ -1,0 +1,1 @@
+web: ginucorn confirm_transaction.wsgi:application
