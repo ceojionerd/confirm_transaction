@@ -34,6 +34,7 @@ def home(request):
 
             result = f"<p>Transaction: {status} <br/>The transaction is from {output['from']} and was made to {output['to']}</p>"
     except exceptions.TransactionNotFound:
+        tag = 'danger'
         result = "Transaction not found!, program currently works for BSC Network"
         
     context = {
