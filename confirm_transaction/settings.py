@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&5i_(0ihmpo3#dcs6hiod&qwon43gdq0rzz7u%y@)06u&yn0my
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['confirm-blockchain-transaction.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
