@@ -1,1 +1,1 @@
-web: ginucorn confirm_transaction.wsgi:application
+web: gunicorn confirm_transaction.wsgi:application
