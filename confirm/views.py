@@ -17,7 +17,6 @@ def home(request):
         if request.method == 'POST':
             transHash = request.POST.get('hash')
             output = web3.eth.get_transaction_receipt(transHash)
-            print(output.value)
             
 
             if output['status'] == 1:
@@ -32,7 +31,8 @@ def home(request):
                 tag = 'danger'
                 status = output['status']
 
-            result = f"<p>Transaction: {status} <br/>The transaction is from {output['from']} and was made to {output['to']}</p>"
+            result = f"<p>Transaction status: {status} <br/>The transaction is from {output['from']} and was made to {output['to']}</p>"
+
     except exceptions.TransactionNotFound:
         tag = 'danger'
         result = "Transaction not found!, program currently works for BSC Network"
